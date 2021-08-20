@@ -10,3 +10,17 @@ The user may specify a target price, in which case the system will continue to s
 
 findbestprice.net
 
+DEVELOPMENT PROCESS & TOOLS:
+
+Database Schema
+Block Diagram
+Class Diagrams
+Sequence Diagrams
+Detailed End-Point tables
+
+PHP
+MySQL
+HTML
+CSS
+JavaScript
+
