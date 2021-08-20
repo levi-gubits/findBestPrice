@@ -1,0 +1,359 @@
+.no-gutters {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "img parameter";
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.content-watch {
+    grid-area: img;
+    margin: auto auto;
+    cursor: pointer;
+}
+
+.content-watch img {
+    transition: transform 0.6s ease;
+    width: 550px
+}
+
+.content-watch:hover img {
+    transform: rotate(-20deg);
+}
+
+.parameter {
+    grid-area: parameter;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.parameter h6 {
+    font-size: 2em;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.parameter h1 {
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-top: -20px;
+}
+
+.parameter p {
+    color: #a8a8a8;
+}
+
+.parameter h5 {
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.parameter h5 span {
+    letter-spacing: 0;
+    color: #a8a8a8;
+    font-size: 1em;
+}
+
+.parameter h2 {
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.parameter .price h2:first-of-type {
+    font-weight: 300;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.parameter h2 span {
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.details span {
+    margin-right: 10px;
+}
+
+.favorite h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.parameter hr {
+    background: #e1e1e1;
+}
+
+.parameter .price {
+    display: grid;
+    grid-template-areas: "price button logo";
+    padding-top: 20px;
+}
+
+.title_and_price {
+    display: flex;
+}
+
+.title_and_price h2:first-child {
+    margin-right: 20px;
+}
+
+.list_of_price {
+    position: relative;
+    cursor: pointer;
+}
+
+.best_price .list_of_price::before {
+    content: 'Full price list';
+    text-decoration: underline;
+    font-size: 1em;
+}
+
+.best_price.active .list_of_price::before {
+    content: 'Only the best price';
+}
+
+.best_price .accordion {
+    position: relative;
+    height: 110px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+/*.best_price.active .accordion {
+    height: 600px;
+}*/
+
+h2 .first-price {
+    margin-left: -60px;
+}
+
+.list_of_price .price a {
+    background: #000;
+    color: #fff;
+    padding: 15px 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.6s ease;
+}
+
+.list_of_price .price:first-child {
+    border-bottom: 1px solid black;
+}
+
+.price a:hover {
+    background: #40c9a2;
+}
+
+.price img {
+    margin: auto;
+}
+
+.cart {
+    text-align: center;
+    margin: 30px;
+}
+
+.cart h3 {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-right: 20px;
+}
+
+.btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    padding: 15px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.6s ease;
+}
+
+.btn:hover {
+    background: #40c9a2;
+}
+
+.cart .btn {
+    background: white;
+    color: black;
+    transition: background 0.6s ease;
+}
+
+.cart .btn:hover {
+    background: #40c9a2;
+}
+
+.favorite {
+    margin: 50px;
+    text-align: center;
+}
+
+.favorite input[type="text"] {
+    border: none;
+    width: 200px;
+    padding: 15px 20px;
+    margin-top: 10px;
+    margin-left: -3px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    outline: none;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+.favorite input[type="text"]:focus {
+    border: 2px solid #40c9a2;
+    box-shadow: 0 0 8px 0 #40c9a2;
+}
+
+.cart button {
+    width: 489px;
+    margin-top: 0;
+}
+
+
+/*מודל שמירת מוצר*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: #000;
+    font-size: 35px;
+}
+
+.close:hover,
+.close:focus {
+    color: #40c9a2;
+    cursor: pointer;
+}
+
+.center {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    background: white;
+    text-align: center;
+    padding: 70px;
+}
+
+
+/*רספונסיביות*/
+
+@media(min-width: 1201px) {
+    .content-watch img {
+        position: absolute;
+        top: 128px;
+        left: 10px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .no-gutters {
+        grid-template-areas: "img" "parameter";
+        grid-template-columns: 1fr;
+    }
+    .parameter {
+        margin: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1150px) {
+    main {
+        margin-top: 80px;
+    }
+}
+
+@media(max-width: 900px) {
+    .favorite input[type="text"] {
+        width: 130px;
+    }
+    .cart button {
+        width: 85%;
+    }
+    .content-watch img {
+        width: 400px
+    }
+    .cart {
+        text-align: center;
+    }
+
+    .center {
+        padding: 30px;
+        font-size: 14px;
+        width: 80%;
+        max-width: 361px;
+    }
+}
+
+@media(max-width: 650px) {
+    .content-watch img {
+        width: 350px;
+    }
+
+    .content-watch:hover img {
+        transform: none;
+    }
+
+    .button-and-input {
+        display: flex;
+    }
+
+    .button-and-input .btn{
+        font-size: 12px;
+    }
+
+    .parameter .price h2:first-of-type {
+        width: 140px;
+        font-size: 1.1em;
+    }
+    .parameter .list_of_price .price h2:first-of-type {
+        width: 50px;
+        font-size: 1.1em;
+    }
+    .list_of_price .parameter h2 {
+        font-size: 1.7em;
+    }
+    .list_of_price .price a {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .circular {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,463 @@
+    body {
+        font-family: 'Roboto', sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    
+    @media (min-width:700px) {
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1;
+        }
+        .title .nav-bar {
+            display: none;
+        }
+        .title {
+            display: flex;
+            width: 100%;
+            height: 70px;
+            padding: 0px;
+            background-color: white;
+        }
+        .title h1 {
+            margin-left: 30px;
+        }
+        nav {
+            padding: 10px;
+            background: #56A8CBFF;
+        }
+        nav a {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 20px;
+            margin-right: 10px;
+            text-decoration: none;
+            font-weight: 300;
+            color: rgb(253, 253, 253);
+        }
+        nav .login_logo {
+            float: right;
+            display: flex;
+        }
+        nav .login_logo a {
+            color: black;
+        }
+        nav .login_logo img {
+            height: 20px;
+            margin-right: -10px;
+        }
+        nav .login_logo img:hover {
+            cursor: pointer;
+        }
+        main {
+            margin-top: 0;
+            width: 100%;
+            background: linear-gradient( #56A8CBFF, rgb(246, 244, 255));
+        }
+        .first_container {
+            display: flex;
+            text-align: center;
+            color: white;
+            margin: 0 20px 10px 20px;
+            background: linear-gradient(-45deg, #FF6F61FF, rgb(81, 93, 254));
+            height: 400px;
+        }
+        .first_container .title_info {
+            text-align: center;
+            margin: auto;
+            width: 1200px;
+            min-width: 600px;
+            flex-direction: column;
+        }
+        .first_container .title_info h1 {
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+        .first_container .title_info p {
+            margin-top: 0;
+        }
+        .first_container .title_info button {
+            font-family: 'Roboto', sans-serif;
+            height: 50px;
+            width: 200px;
+            margin: auto;
+            margin-top: 20px;
+            border: none;
+            border-radius: 30px;
+            background-color: rgb(68, 78, 230);
+            font-size: 20px;
+            font-weight: 300;
+            color: white;
+            cursor: pointer;
+            outline: none;
+        }
+        .first_container .title_info button:hover {
+            background-color: white;
+            color: black;
+            transition-duration: 700ms;
+        }
+        article {
+            margin: 30px 20px 10px 20px;
+        }
+        .title_container {
+            background: linear-gradient(45deg, #f4af1b, #F2BC94);
+            color: black;
+            display: flex;
+            height: 450px;
+            width: 100%;
+        }
+        .title_container img {
+            height: 100%;
+            width: 50%;
+            float: right;
+        }
+        .article_main_title {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            flex-direction: column;
+            font-size: 22px;
+        }
+        .article_main_title p {
+            width: 400px;
+        }
+        .instruction {
+            display: flex;
+            width: 100%;
+            margin-top: 30px;
+            height: 350px;
+            justify-content: space-between;
+        }
+        .instruction .container {
+            background: linear-gradient(45deg, #f4af1b, #F2BC94);
+            height: 100%;
+            width: 33%;
+        }
+        .explanation {
+            width: 300px;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            font-size: 20px;
+            align-items: center;
+            text-align: center;
+        }
+        .instruction .container img {
+            height: 100px;
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        footer .help_control {
+            display: flex;
+            margin-top: 30px;
+            background: linear-gradient(-45deg, #FF6F61FF, rgb(81, 93, 254));
+            color: white;
+            height: 400px;
+            justify-content: space-between;
+        }
+        footer .help_control .help_control_info {
+            height: 100%;
+            width: 800px;
+            display: flex;
+            margin-top: auto;
+            margin-bottom: auto;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .help_control_info .help_center_link a {
+            width: 200px;
+            height: 50px;
+            background-color: rgb(61, 71, 211);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            border-radius: 30px;
+        }
+        .help_control_info .help_center_link a:hover {
+            background-color: white;
+            color: black;
+            transition-duration: 700ms;
+        }
+        .help_control img {
+            height: 100%;
+            width: 50%;
+            float: right;
+        }
+        footer .links_and_information {
+            height: 400px;
+            background-color: white;
+        }
+        footer a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            font-weight: 300;
+        }
+        footer .container {
+            display: flex;
+        }
+        footer .container .links {
+            width: 25%;
+            padding: 10px;
+            margin-top: 30px;
+            margin-left: 50px;
+            text-align: center;
+        }
+        .links .logo {
+            margin-top: 10px;
+        }
+        .links .logo a {
+            display: inline;
+        }
+        .links .logo img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    @media(max-width: 700px) {
+        header {
+            width: 100%;
+            height: 70px;
+            top: 0;
+            z-index: 1;
+        }
+        .title {
+            display: flex;
+            width: 100%;
+            padding: 0px;
+            background-color: white;
+            justify-content: space-between;
+        }
+        .title h1 {
+            margin-left: 30px;
+        }
+        .title button {
+            border: none;
+            background: none;
+            outline: none;
+        }
+        .nav-bar {
+            display: block
+        }
+        .title button img {
+            width: 40px;
+            height: 40px;
+            margin-top: auto;
+            margin-bottom: auto;
+            cursor: pointer;
+        }
+        nav {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background-color: white;
+        }
+        .nav_links {
+            margin: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        nav a {
+            font-size: 25px;
+            color: black;
+            text-decoration: none;
+            padding: 30px;
+        }
+        .login_logo {
+            margin-top: 20px;
+            width: 300px;
+            border-bottom: 1px silver solid;
+        }
+        .login_logo a {
+            font-size: 25px;
+            color: #2691d9;
+        }
+        .login_logo a:hover {
+            color: #000;
+        }
+        .close_nav {
+            position: absolute;
+            top: 45px;
+            right: 100px;
+            color: #000;
+            font-size: 35px;
+        }
+        .close_nav:hover,
+        .close_nav:focus {
+            color: #2691d9;
+            cursor: pointer;
+        }
+        main {
+            margin-top: 0;
+            width: 100%;
+            background: linear-gradient( #56A8CBFF, rgb(246, 244, 255));
+        }
+        .first_container {
+            text-align: center;
+            background: linear-gradient(-45deg, #FF6F61FF, rgb(81, 93, 254));
+            height: 400px;
+            color: white
+        }
+        .first_container .title_info {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .title_info h1 {
+            padding-top: 75px;
+            font-size: 40px;
+            margin-bottom: 0;
+        }
+        .title_info p {
+            margin-top: 0;
+        }
+        .first_container button {
+            font-family: 'Roboto', sans-serif;
+            height: 50px;
+            width: 200px;
+            margin-top: 30px;
+            border: none;
+            border-radius: 30px;
+            background-color: rgb(61, 71, 211);
+            font-size: 20px;
+            font-weight: 300;
+            color: white;
+            cursor: pointer;
+            outline: none;
+        }
+        .first_container button:hover {
+            background-color: white;
+            color: black;
+            transition-duration: 700ms;
+        }
+        .center {
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: white;
+            padding-top: 60px;
+        }
+        .title_container {
+            margin-top: 20px;
+            text-align: center;
+            height: 600px;
+        }
+        .article_main_title {
+            background: linear-gradient(45deg, #f4af1b, #F2BC94);
+            height: 300px;
+            min-width: 400px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .article_main_title h3 {
+            margin-bottom: 0;
+        }
+        .article_main_title p {
+            width: 350px;
+        }
+        .title_container img {
+            height: 300px;
+            width: 100%;
+        }
+        .instruction {
+            height: 1000px;
+            text-align: center;
+        }
+        .instruction .container {
+            margin: 30px 10px;
+            height: 300px;
+            background: linear-gradient(45deg, #f4af1b, #F2BC94);
+        }
+        .instruction img {
+            height: 100px;
+            width: 100px;
+            margin-top: 50px;
+        }
+        .container .explanation {
+            width: 300px;
+            height: 100%;
+            margin: auto;
+            font-size: 20px;
+        }
+        footer .help_control {
+            margin-top: 20px;
+            margin-bottom: -20px;
+            height: 600px;
+            text-align: center;
+            background: linear-gradient(-45deg, #FF6F61FF, rgb(81, 93, 254));
+        }
+        .help_control .help_control_info {
+            height: 300px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .help_control_info .help_center_link a {
+            width: 200px;
+            height: 50px;
+            background-color: rgb(61, 71, 211);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            border-radius: 30px;
+        }
+        .help_control_info .help_center_link a:hover {
+            background-color: white;
+            color: black;
+            transition-duration: 700ms;
+        }
+        .help_control img {
+            height: 300px;
+            width: 100%;
+        }
+        .links .logo img {
+            width: 20px;
+            height: 20px;
+        }
+        footer .links_and_information {
+            margin-top: 0;
+            text-align: left;
+            background-color: white;
+        }
+        .links_and_information .container .links {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+        .links h4 {
+            font-size: 20px;
+        }
+        .links a {
+            color: black;
+            text-decoration: none;
+            font-weight: 300;
+        }
+        .logo {
+            margin-top: 15px;
+        }
+    }

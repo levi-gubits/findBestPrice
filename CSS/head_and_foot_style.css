@@ -1,0 +1,390 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    padding: 0;
+    background-color: white;
+}
+
+.title h1 {
+    margin-left: 30px;
+}
+
+.title a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar {
+    display: none;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    cursor: pointer;
+    outline: none;
+}
+
+.nav-bar img {
+    width: 35px;
+}
+
+nav {
+    padding-top: 10px;
+    height: 30px;
+    background-color: black;
+    margin-left: -25px;
+}
+
+nav .menu ul {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    list-style: none;
+}
+
+.menu ul li {
+    width: 150px;
+    height: 50px;
+}
+
+.menu ul li a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+}
+
+.menu ul .active >a {
+    color: #4af3c3;
+}
+
+.menu ul .active .submenu_1 a {
+    color: white;
+}
+
+.submenu_1 {
+    display: none;
+    position: absolute;
+    margin-top: 15px;
+    z-index: 2;
+}
+
+.menu ul li:hover .submenu_1 {
+    display: flex;
+    position: absolute;
+    background-color: black;
+    margin-top: 15px;
+}
+
+.submenu_1 ul {
+    flex-direction: column;
+    margin: 10px;
+    padding-left: 0;
+}
+
+.submenu_1 ul li {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    border-bottom: 1px solid silver;
+    text-align: left;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.submenu_1 li:last-child {
+    border-bottom: none;
+}
+
+.submenu_2 {
+    display: none;
+}
+
+.hover-me:hover .submenu_2 {
+    position: absolute;
+    display: block;
+    margin-top: -27px;
+    margin-left: 150px;
+    background-color: black;
+}
+
+.fa-angle-right {
+    float: right;
+    color: white;
+}
+
+ul li .newUpdate {
+    background: green;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    display: none;
+    margin-right: -19px;
+}
+
+nav a {
+    margin-left: 20px;
+}
+
+.title .account_status {
+    display: flex;
+    position: absolute;
+    top: 130px;
+    right: 0%;
+}
+
+.title .account_status a {
+    color: white;
+    text-decoration: none;
+    margin-top: -50px;
+    margin-right: 25px;
+}
+
+.title .account_status p {
+    color: white;
+    margin-top: -50px;
+    margin-right: 25px;
+}
+
+main {
+    margin-top: 110px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    height: 100%;
+    width: 100%;
+    background: #ebebeb;
+}
+
+footer {
+    grid-area: footer;
+    position: relative;
+    top: 0px;
+}
+
+footer a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+footer .help_control {
+    display: grid;
+    grid-template-areas: "help_control_text help_control_img";
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+    background: black;
+    color: white;
+    height: auto;
+}
+
+footer .help_control .help_control_info {
+    grid-area: help_control_text;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.help_control_info .help_center_link a {
+    width: 200px;
+    height: 50px;
+    background-color: #40c9a2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.help_control_info .help_center_link a:hover {
+    background-color: white;
+    color: black;
+    transition-duration: 700ms;
+}
+
+.help_control img {
+    grid-area: help_control_img;
+    height: auto;
+    width: 100%;
+}
+
+footer .links_and_information {
+    min-height: 400px;
+    background-color: white;
+}
+
+footer .links_and_information .container {
+    text-align: center;
+    display: grid;
+    grid-template-areas: "category links contact follow_us";
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer .container .links {
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .container .links:first-child {
+    grid-area: category;
+}
+
+footer .container .links:nth-child(2) {
+    grid-area: links;
+}
+
+footer .container .links:nth-child(3) {
+    grid-area: contact;
+}
+
+footer .container .links:nth-child(4) {
+    grid-area: follow_us;
+}
+
+.links .logo {
+    margin-top: 10px;
+}
+
+.links .logo a {
+    display: inline;
+}
+
+.links .logo img {
+    width: 20px;
+    height: 20px;
+}
+
+@media(max-width: 1100px) {
+    .nav-bar {
+        display: block;
+    }
+    nav {
+        height: 0;
+        overflow: hidden;
+        background-color: white;
+        text-align: center;
+        transition: 0.5s;
+    }
+    nav.display {
+        height: 100vh;
+    }
+    nav .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu>ul>li {
+        margin-top: 50px;
+    }
+    .menu ul li a {
+        margin-right: 0;
+        color: black;
+        font-size: 1.4em;
+    }
+    .menu ul .active .submenu_1 a {
+        color: black;
+    }
+    .menu ul li:hover .submenu_1 {
+        background-color: white;
+        border: 1px solid silver;
+    }
+    .hover-me:hover .submenu_2 {
+        margin-top: -35px;
+        margin-left: 155px;
+        background-color: white;
+        border: 1px solid silver;
+    }
+    .fa-angle-right {
+        float: right;
+        color: black;
+        position: relative;
+        top: 5px;
+    }
+    .title .account_status {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        right: 70px;
+        width: 360px;
+        font-size: 14px;
+    }
+    .title .account_status a,
+    .title .account_status p {
+        color: black;
+        margin: auto;
+    }
+}
+
+@media(max-width: 900px){
+    footer .help_control {
+        display: grid;
+        grid-template-areas: "help_control_text" "help_control_img";
+        grid-template-columns: 1fr;
+        margin-top: 10px;
+        height: auto;
+    }
+    footer .help_control_info {
+        height: 400px;
+    }
+    footer .links_and_information .container {
+        grid-template-areas: "category" "links" "contact" "follow_us";
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+    .title .account_status {
+        top: 80px;
+        flex-direction: row; 
+        width: 100%;
+        background: white;
+        position: absolute;
+        right: 0;
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+    .title .account_status :nth-child(1),
+    .title .account_status :nth-child(2){
+        border-right: 1px solid gray;
+        padding-right: 10%;
+    }
+    .title .account_status :last-child {
+        border-right: none;
+        margin-left: 10px;
+        padding-right: 0%;
+    }
+    .submenu_1 {
+        right: 160px;
+    }
+    .help_control img {
+        height: 350px;
+    }
+}
